@@ -1,0 +1,37 @@
+.breadcrumbs{
+  display: flex;
+  flex-direction: row;
+}
+
+.breadcrumbs-item {
+  color: #6B6B6B;
+  text-decoration: none;
+  display: inline-block;
+
+  position: relative;
+  padding: 40px 32px 40px 0;
+
+  &:last-child{
+    color: #D3D3D3;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  &:first-child{
+    color: #6B6B6B;
+  }
+  &:not(:last-child):after{
+    content: "";
+
+    position: absolute;
+    right: 5px;
+    top: 50%;
+
+
+    width: 22px;
+    height: 22px;
+    background: url("./breadcrumbs-arrow.svg");
+
+    transform: translateY(-50%);
+  }
+}

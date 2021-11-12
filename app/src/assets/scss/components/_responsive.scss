@@ -1,0 +1,11 @@
+@media screen and (max-width: $desktop-width-default) {
+  .responsive-mobile-hide {
+    display: none;
+  }
+}
+
+@media screen and (min-width: $desktop-width-default) {
+  .responsive-desktop-hide {
+    display: none;
+  }
+}

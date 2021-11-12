@@ -1,0 +1,47 @@
+.icon-menu {
+  position: relative;
+  display: block;
+  width: 18px;
+  height: 12px;
+  cursor: pointer;
+
+  span {
+
+    top: 5px;
+
+    &, &:before, &:after {
+      background: #696969;
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      border-radius: 10px;
+      display: block;
+      transition: .3s;
+    }
+
+    &:before, &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    &:before {
+      transform: translateY(-5px);
+    }
+
+    &:after {
+      transform: translateY(5px);
+    }
+  }
+}
+
+.icon-menu.icon-menu-open {
+  transform: rotate(45deg);
+
+  span {
+    &:after, &:before {
+      transform: rotate(90deg);
+    }
+  }
+}

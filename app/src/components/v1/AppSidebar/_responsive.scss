@@ -1,0 +1,17 @@
+@import "/src/assets/scss/variables/responsive";
+
+@media screen and (max-width: $desktop-width-default) {
+  .sidebar{
+    left: -100%;
+    width: 100%;
+    top:62px;
+
+    transition: .2s;
+  }
+  .sidebar-label{
+    border-top: solid #E2E2E2 1px;
+  }
+  .sidebar-mobile-active{
+    left: 0;
+  }
+}

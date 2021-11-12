@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  node:
+    build:
+      context: ./
+      dockerfile: ./docker/node/Dockerfile
+    volumes:
+      - ./app:/app
+    command: ${CONTAINERS_WORKDIR}
+    ports:
+      - ${NODE_EXTERNAL_PORT}:${NODE_INTERNAL_PORT}

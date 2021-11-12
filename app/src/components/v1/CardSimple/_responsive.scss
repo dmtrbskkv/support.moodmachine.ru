@@ -1,0 +1,7 @@
+@import "/src/assets/scss/variables/responsive";
+
+@media screen and (max-width: $desktop-width-default) {
+  .card:hover{
+    transform: none;
+  }
+}

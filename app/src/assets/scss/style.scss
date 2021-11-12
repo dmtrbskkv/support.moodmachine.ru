@@ -1,0 +1,37 @@
+@import "variables/responsive";
+
+@import "mixins/typography";
+
+@import "components/fonts";
+@import "components/typography";
+@import "components/responsive";
+
+@import "components/icon-menu";
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+
+  scroll-behavior: smooth;
+
+  @include fontStyleDefault();
+}
+
+.layout-main {
+  width: 800px;
+  margin: 65px auto 0;
+}
+
+
+@media screen and (max-width: $desktop-width-default) {
+  .layout-main {
+    width: 100%;
+    padding: 0 10px 40px;
+    margin: 65px auto 0;
+    box-sizing: border-box;
+  }
+}
+
+
+

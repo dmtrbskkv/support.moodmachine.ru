@@ -1,0 +1,102 @@
+@import "/src/assets/scss/mixins/typography";
+
+.toc {
+  width: 100%;
+}
+
+.toc-level-root,
+.toc-level-child {
+  padding: 0;
+  margin: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+.toc-item a {
+  display: block;
+  @include typographyLinkReset();
+}
+
+.toc-level-root {
+  margin: 8px 0;
+
+  & > .toc-item > a {
+    padding: 8px 2px 8px 12px;
+  }
+
+  & > .toc-item-active {
+    background: #F2F2F2;
+  }
+  & > .toc-item-expanded{
+    padding: 8px 0 16px 12px;
+    margin: 8px 0;
+  }
+}
+
+.toc-level-child {
+  position: relative;
+  box-sizing: border-box;
+
+  & > .toc-item {
+    a {
+      position: relative;
+      color: #666666;
+      font-size: 14px;
+
+      span {
+        padding: 6px 0 6px 32px;
+        box-sizing: border-box;
+        display: inline-block;
+      }
+    }
+
+
+    &:hover a, &.toc-item-active a {
+      color: #434343;
+    }
+  }
+}
+
+.toc-level-child:before {
+  content: "";
+  width: 1px;
+  height: 100%;
+  background: #CBCBCB;
+
+  position: absolute;
+  left: 21px;
+  top: 0;
+}
+
+
+.toc-level-child > .toc-item {
+  a:before {
+    content: "";
+    width: 9px;
+    height: 9px;
+    background: #CBCBCB;
+    border-radius: 50%;
+
+    transition: .2s;
+
+    position: absolute;
+    right: calc(100% - 26px);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  a:hover:before, &.toc-item-active a:before {
+    border-radius: 0 50px 50px 0;
+    width: 100px;
+  }
+
+  a:hover:before {
+    background: #F3665D;
+  }
+
+  &.toc-item-active a:before {
+    background: #ee4c4f;
+  }
+}
