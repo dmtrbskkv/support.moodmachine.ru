@@ -4,8 +4,9 @@ FROM node:lts
 RUN npm install -g gatsby-cli
 
 WORKDIR /app
-COPY app/package.json /app
-COPY app/package-lock.json /app
-RUN npm install
+
+#COPY ./app/package.json /app
+#COPY ./app/package-lock.json /app
+#RUN npm install
 
 
