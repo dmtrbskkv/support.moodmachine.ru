@@ -5,5 +5,5 @@ WORKDIR /app
 RUN npm install -g gatsby-cli
 
 # Обновление пакетов
-COPY app/package.json .
-RUN npm install
+#COPY app/package.json .
+#RUN npm install
