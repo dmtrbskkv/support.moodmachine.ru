@@ -7,6 +7,6 @@ services:
       dockerfile: ./docker/node/Dockerfile
     volumes:
       - ./app:/app
-    command: ${CONTAINERS_WORKDIR}
+    command: ${NODE_CMD}
     ports:
       - ${NODE_EXTERNAL_PORT}:${NODE_INTERNAL_PORT}
