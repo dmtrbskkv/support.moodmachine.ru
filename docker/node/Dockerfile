@@ -1,4 +1,4 @@
-FROM node:lts
+FROM node:lts-alpine
 
 # Gutsby CLI
 RUN npm install -g gatsby-cli
