@@ -5,6 +5,7 @@ services:
     build:
       context: ./
       dockerfile: ./docker/node/Dockerfile
+    working_dir: /app
     volumes:
       - ./app:/app
     command: ${NODE_CMD}
