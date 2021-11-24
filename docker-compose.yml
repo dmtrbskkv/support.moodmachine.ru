@@ -7,7 +7,7 @@ services:
       dockerfile: ./docker/node/Dockerfile
     entrypoint: gatsby
     volumes:
-      - .:/app
+      - ./app:/app
 
   develop:
     build:
@@ -17,4 +17,4 @@ services:
     ports:
       - ${NODE_EXTERNAL_PORT}:${NODE_INTERNAL_PORT}
     volumes:
-      - .:/app
+      - ./app:/app
