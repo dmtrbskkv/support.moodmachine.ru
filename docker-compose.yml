@@ -1,13 +1,20 @@
 version: "3"
 
 services:
-  node:
+  gatsby:
     build:
-      context: ./
-      dockerfile: ./docker/node/Dockerfile
-    working_dir: /app
+      context: .
+      dockerfile: Dockerfile
+    entrypoint: gatsby
     volumes:
-      - ./app:/app
+      - .:/app
+
+  develop:
+    build:
+      context: .
+      dockerfile: Dockerfile
     command: ${NODE_CMD}
     ports:
       - ${NODE_EXTERNAL_PORT}:${NODE_INTERNAL_PORT}
+    volumes:
+      - .:/app
