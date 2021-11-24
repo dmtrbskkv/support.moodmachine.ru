@@ -1,12 +1,14 @@
 FROM node:lts-alpine
 
+WORKDIR /home/node/app
+
 # Gutsby CLI
-RUN npm install -g gatsby-cli
+RUN npm i -g gatsby-cli
 
-WORKDIR /app
-
-#COPY ./app/package.json /app
-#COPY ./app/package-lock.json /app
-#RUN npm install
+# Install packages
+USER node
+COPY ./app/package.json /home/node/app
+COPY ./app/package-lock.json /home/node/app
+RUN npm install
 
 

@@ -6,7 +6,7 @@ services:
       context: ./
       dockerfile: ./docker/node/Dockerfile
     volumes:
-      - ./app:/app
+      - ./app:/home/node/app
     command: ${NODE_CMD}
     ports:
       - ${NODE_EXTERNAL_PORT}:${NODE_INTERNAL_PORT}
