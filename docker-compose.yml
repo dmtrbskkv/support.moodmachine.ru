@@ -12,7 +12,7 @@ services:
   develop:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: docker/node/Dockerfile
     command: ${NODE_CMD}
     ports:
       - ${NODE_EXTERNAL_PORT}:${NODE_INTERNAL_PORT}
