@@ -5,6 +5,8 @@ WORKDIR /home/node/app
 # Gutsby CLI
 RUN npm i -g gatsby-cli
 
+USER node
+
 ONBUILD RUN npm install
 
 
