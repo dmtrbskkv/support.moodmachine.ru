@@ -1,6 +1,2 @@
-FROM node:lts-alpine
-
-WORKDIR /home/node/app
-
-# Gutsby CLI
-RUN npm i -g gatsby-cli
+FROM node:alpine
+RUN npm install --global gatsby-cli
