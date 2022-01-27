@@ -29,7 +29,8 @@ module.exports = {
             options: {
               maxWidth: 620,
               showCaptions: true,
-              markdownCaptions: true
+              markdownCaptions: true,
+              quality:100
             },
           },
           `gatsby-remark-copy-linked-files`
@@ -37,7 +38,14 @@ module.exports = {
       },
     },
 
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        // Set to false to allow builds to continue on image errors
+        failOnError: false,
+        defaultQuality: 80,
+      },
+    },
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
   ],
