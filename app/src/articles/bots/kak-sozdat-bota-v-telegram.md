@@ -1,5 +1,8 @@
 ---
-title: Как создать бота в телеграмме? slug: kak-sozdat-bota-v-telegram category: bots date: 2021-11-10T16:32:00+10:00
+title: Как создать бота в телеграмме? 
+slug: kak-sozdat-bota-v-telegram 
+category: bots 
+date: 2021-11-10T16:32:00+10:00
 ---
 
 ## Создание простейшего бота
