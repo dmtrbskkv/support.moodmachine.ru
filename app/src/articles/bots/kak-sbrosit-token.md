@@ -1,6 +1,6 @@
 ---
-title: Как сбросить токен бота 
-slug: kak-sbrosit-token 
+title: Как сбросить токен телеграмм бота 
+slug: kak-sbrosit-telegram-token 
 category: bots 
 date: 2021-11-11T11:35:00+10:00
 ---
@@ -29,4 +29,4 @@ AAHDUJkOS2l3aMjTEtGmRVDnRDQYqoNfTkI**, ваш новый токен.
 ## Настройка бота
 
 Если вам необходима расширенная настройка бота, включая изображение бота, описание и список доступных команд, то
-рекомендуем наше [руководство по расширенной настройке бота](/bots/rashirennaya-nastroika-bota)
+рекомендуем наше [руководство по расширенной настройке бота](/bots/rashirennaya-nastroika-telgram-bota)
